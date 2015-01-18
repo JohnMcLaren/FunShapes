@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 FunShapes
 =========
 Editor 2D graphical  objects / Редактор графических 2D объектов
 
-![screenshot](https://github.com/JohnMcLaren/FunShapes/funshapes_screenshot.png)
+![screenshot](https://github.com/JohnMcLaren/FunShapes/blob/master/funshapes_screenshot.png)
 
 ####Description
 
@@ -38,7 +37,3 @@ The **editor** allows you to create and edit embedded types of objects, such as:
 
 **Scene** supports clipboard operations (**Cut / Copy / Paste**), and has a mechanism of undo / redo changes for objects (**Undo / Redo**). The state of the scene with objects and all their parameters (including images of objects "Image") can be saved to a file. Scene's file is a simple text file where the scene, objects and their parameters are described in the **XML** format.
 
-
-=======
-# FunShapes
->>>>>>> bb8640a449a83531a8ea86cfae2802d444a7421f
