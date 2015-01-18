@@ -102,22 +102,22 @@
 <p>Класс <strong>CGraphObject</strong> унаследован от &lt;<strong>QGraphicsObject</strong>&gt; и поэтому уже имеет встроенные методы взаимодействия с пользователем (реакция на мышь и кнопки) и другими объектами на сцене (слои отображения, вычисление пересечений), а также свой метод отрисовки себя на сцене - <em><strong>paint()</strong></em>.
 Создание объекта начинается с подбора контура от запрошенного (аргумент <strong>type</strong> конструктора) из имеющихся(группа функций вида <strong>get...Path()</strong>). Если метод отрисовки запрошенной фигуры имеется, далее к создаваемому объекту применяются остальные переданные в конструктор параметры.</p>
 
-<div class="highlight highlight-sh"><pre>CGraphObject
-(const QString <span class="pl-s3">type</span>,    // один из допустимых типов объекта
-const QString name,    // уникальное имя объекта на сцене
-const qreal x,        // координата X
-const qreal y,        // координата Y
-const qreal z,        // координата Z (слой объекта)
-const qreal width,    // ширина
-const qreal height,    // высота
-const qreal angle,    // угол наклона объекта
-const DWORD color,    // цвет заливки объекта
-const QString text,    // встроенный текст объекта
-QString textfont,        // далее параметры этого текста
+<div class="highlight highlight-C++"><pre>CGraphObject
+(<span class="pl-s">const</span> QString type,    <span class="pl-c">// один из допустимых типов объекта</span>
+<span class="pl-s">const</span> QString name,    <span class="pl-c">// уникальное имя объекта на сцене</span>
+<span class="pl-s">const</span> qreal x,        <span class="pl-c">// координата X</span>
+<span class="pl-s">const</span> qreal y,        <span class="pl-c">// координата Y</span>
+<span class="pl-s">const</span> qreal z,        <span class="pl-c">// координата Z (слой объекта)</span>
+<span class="pl-s">const</span> qreal width,    <span class="pl-c">// ширина</span>
+<span class="pl-s">const</span> qreal height,    <span class="pl-c">// высота</span>
+<span class="pl-s">const</span> qreal angle,    <span class="pl-c">// угол наклона объекта</span>
+<span class="pl-s">const</span> DWORD color,    <span class="pl-c">// цвет заливки объекта</span>
+<span class="pl-s">const</span> QString text,    <span class="pl-c">// встроенный текст объекта</span>
+QString textfont,        <span class="pl-c">// далее параметры этого текста</span>
 DWORD textsize,
-const DWORD textcolor,
-const QString image,    // картинка под объект “Рисунок” в формате Base64
-DWORD <span class="pl-k">*</span>scenemode)    // указатель на переменную сцены (текущий режим редактирования объектов Геометрия/Вращение)</pre></div>
+<span class="pl-s">const</span> DWORD textcolor,
+<span class="pl-s">const</span> QString image,    <span class="pl-c">// картинка под объект “Рисунок” в формате Base64</span>
+DWORD *scenemode)    <span class="pl-c">// указатель на переменную сцены (текущий режим редактирования объектов Геометрия/Вращение)</span></pre></div>
 
 <p><img src="https://raw.githubusercontent.com/JohnMcLaren/FunShapes/master/etc/3.png" alt="">
 <img src="https://raw.githubusercontent.com/JohnMcLaren/FunShapes/master/etc/4.png" alt=""></p>
