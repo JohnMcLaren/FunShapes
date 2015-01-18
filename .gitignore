@@ -1,0 +1,7 @@
+/debug
+/images/image
+/images/transform-rotate-2-png-256
+/images/*.db
+/release
+/*.Debug
+/*.Release

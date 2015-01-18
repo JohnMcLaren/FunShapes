@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/Circle.png</file>
+        <file>images/copy.png</file>
+        <file>images/cut.png</file>
+        <file>images/Delete.png</file>
+        <file>images/new.png</file>
+        <file>images/open.png</file>
+        <file>images/paste.png</file>
+        <file>images/Qt.png</file>
+        <file>images/Rectangle.png</file>
+        <file>images/Redo.png</file>
+        <file>images/save.png</file>
+        <file>images/Triangle.png</file>
+        <file>images/Undo.png</file>
+        <file>images/ChangeColor.png</file>
+        <file>images/Text.png</file>
+        <file>images/Image.png</file>
+        <file>images/DefaultImage.png</file>
+        <file>images/ChangeImage.png</file>
+        <file>images/ChangeAngle.png</file>
+        <file>images/ChangeText.png</file>
+        <file>images/rotate_cursor.png</file>
+        <file>images/geometry_edit.png</file>
+        <file>images/rotate2.png</file>
+    </qresource>
+</RCC>
