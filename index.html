@@ -1,36 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Funshapes : Editor 2D graphical  objects &lt;C++/Qt5&gt;">
+    <title>Funshapes by JohnMcLaren</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Funshapes</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-
   <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Funshapes</h1>
+        <p class="header">Editor 2D graphical  objects &lt;C++/Qt5&gt;</p>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/JohnMcLaren/FunShapes">View on GitHub</a>
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/JohnMcLaren/FunShapes/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/JohnMcLaren/FunShapes/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/JohnMcLaren/FunShapes">View On GitHub</a></li>
+        </ul>
 
-          <h1 id="project_title">Funshapes</h1>
-          <h2 id="project_tagline">Editor 2D graphical  objects &lt;C++/Qt5&gt;</h2>
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/JohnMcLaren">JohnMcLaren</a></p>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/JohnMcLaren/FunShapes/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/JohnMcLaren/FunShapes/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+      </header>
+      <section>
         <h2>
 <a id="1---Описание" class="anchor" href="#1---%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.   Описание</h2>
 
@@ -100,9 +99,9 @@
 <a id="cgraphobject" class="anchor" href="#cgraphobject" aria-hidden="true"><span class="octicon octicon-link"></span></a>CGraphObject</h3>
 
 <p>Класс <strong>CGraphObject</strong> унаследован от &lt;<strong>QGraphicsObject</strong>&gt; и поэтому уже имеет встроенные методы взаимодействия с пользователем (реакция на мышь и кнопки) и другими объектами на сцене (слои отображения, вычисление пересечений), а также свой метод отрисовки себя на сцене - <em><strong>paint()</strong></em>.
-Создание объекта начинается с подбора контура от запрошенного (аргумент <strong>type</strong> конструктора) из имеющихся(группа функций вида <strong>get...Path()</strong>). Если метод отрисовки запрошенной фигуры имеется, далее к создаваемому объекту применяются остальные переданные в конструктор параметры.
-<code>
-CGraphObject
+Создание объекта начинается с подбора контура от запрошенного (аргумент <strong>type</strong> конструктора) из имеющихся(группа функций вида <strong>get...Path()</strong>). Если метод отрисовки запрошенной фигуры имеется, далее к создаваемому объекту применяются остальные переданные в конструктор параметры.</p>
+
+<pre><code>CGraphObject
 (const QString type,    // один из допустимых типов объекта
 const QString name,    // уникальное имя объекта на сцене
 const qreal x,        // координата X
@@ -118,8 +117,9 @@ DWORD textsize,
 const DWORD textcolor,
 const QString image,    // картинка под объект “Рисунок” в формате Base64
 DWORD *scenemode)    // указатель на переменную сцены (текущий режим редактирования объектов Геометрия/Вращение)
-</code>
-<img src="https://raw.githubusercontent.com/JohnMcLaren/FunShapes/master/etc/3.png" alt="">
+</code></pre>
+
+<p><img src="https://raw.githubusercontent.com/JohnMcLaren/FunShapes/master/etc/3.png" alt="">
 <img src="https://raw.githubusercontent.com/JohnMcLaren/FunShapes/master/etc/4.png" alt=""></p>
 
 <h3>
@@ -166,17 +166,12 @@ DWORD *scenemode)    // указатель на переменную сцены 
     bool        clipboard;
 }STD_ATTR;</p>
       </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Funshapes maintained by <a href="https://github.com/JohnMcLaren">JohnMcLaren</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
       </footer>
     </div>
-
-              <script type="text/javascript">
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		          <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -186,7 +181,6 @@ DWORD *scenemode)    // указатель на переменную сцены 
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
-
 
   </body>
 </html>
