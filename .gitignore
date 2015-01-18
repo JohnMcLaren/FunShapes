@@ -5,3 +5,4 @@
 /release
 /*.Debug
 /*.Release
+/.gitignore
