@@ -31,53 +31,104 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h1>
-<a id="funshapes" class="anchor" href="#funshapes" aria-hidden="true"><span class="octicon octicon-link"></span></a>FunShapes</h1>
+        <p><strong>Редактор</strong>написан на языке C++ с использованием
+кроссплатформы Qt5. Он может служить шаблоном для начинающих программистов
+использующих Qt для создания собственных программ использующих 2D графику. В
+коде программы можно найти примеры:</p>
 
-<p>Editor 2D graphical  objects / Редактор графических 2D объектов</p>
+<p> </p>
 
-<p><img src="https://github.com/JohnMcLaren/FunShapes/blob/master/funshapes_screenshot.png" alt="screenshot"></p>
+<p>1.      
+Класса &lt;<strong>QSignalMapper</strong>&gt;как
+коммутатора событий/сигналов возникающих в программе</p>
 
-<h4>
-<a id="description" class="anchor" href="#description" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description</h4>
+<p>2.      
+Запись в файл, чтение из файла &lt;<strong>QFile,
+QFileDialog, QTextStream</strong>&gt;</p>
 
-<p>The <strong>editor</strong> is written on C ++ using cross-platform <strong>Qt5</strong>. It can serve as a template for novice programmers using Qt to create their own programs using 2D graphics. In the program code can be found examples:</p>
+<p>3.      
+Создание собственного контексного меню &lt;<strong>QMenu</strong>&gt;</p>
 
-<ol>
-<li> Class [<strong>QSignalMapper</strong>] as switch  events / signals arising in the program</li>
-<li> Writing to file, read from file [<strong>QFile, QFileDialog, QTextStream</strong>]</li>
-<li> Creating your own context menu [<strong>QMenu</strong>]</li>
-<li> Implementation mechanism undo / redo actions made by the user (<strong>Undo/Redo</strong>). He can also be used to automation software - as record/playback macros, animation etc.</li>
-<li> Transformation of a graphic view of the scene / objects (scale, rotation) [<strong>QTransform</strong>]</li>
-<li> Working with View of Scene [<strong>QGraphicsView</strong>] coordinate transformation (mapFrom…)</li>
-<li> Drawing with [<strong>QPainterPath</strong>]</li>
-<li> Overriding the paint () method of the object to control the process of drawing (use gradient fill, "highlighting", the definition of the order of drawing intersecting objects, control the scale drawing) [<strong>QPainter</strong>]</li>
-<li> Convert binary data to Base64 and back [<strong>QString, QByteArray</strong>]</li>
-<li>Selecting multiple objects with the mouse [<strong>Rubber Band Region</strong>]</li>
-</ol>
+<p>4.      
+Реализация механизма отмены/восстановления
+произведённых пользователем действий (<strong>Undo/Redo</strong>). Он же может быть
+использован для автоматизации действий программы - запись/воспроизведение
+макросов, анимация.</p>
 
-<p>The <strong>editor</strong> allows you to create and edit embedded types of objects, such as:</p>
+<p>5.      
+Трансформации графического вида сцены/объектов
+(масштаб, вращение) &lt;<strong>QTransform</strong>&gt;</p>
 
-<ol>
-<li> Triangle</li>
-<li> Rectangle</li>
-<li> Circle</li>
-<li> Text</li>
-<li> Image</li>
-</ol>
+<p>6.      
+Работа с видом сцены &lt;<strong>QGraphicsView</strong>&gt;
+преобразование координат (<strong>mapFrom…</strong>)</p>
 
-<p><strong>Objects</strong> might change the following parameters:</p>
+<p>7.      
+Рисование с использованием &lt;<strong>QPainterPath</strong>&gt;</p>
 
-<ol>
-<li> Position</li>
-<li> Geometry(for objects "Image"/"Text", image/text scaled for object area)</li>
-<li> Orientation (angle on the Z axis)</li>
-<li> Color (except object "Image")</li>
-<li> Embedded text of object as well as the font, size and color of this text (except "Text" object)</li>
-</ol>
+<p>8.      
+Переопределение метода _paint() _объекта
+для управления процессом отрисовки (использование градиентной заливки,
+“подсветки” , определение порядка отрисовки пересекающихся объектов, управление
+масштабом рисования) &lt;<strong>QPainter</strong>&gt;</p>
 
-<p><strong>Scene</strong> supports clipboard operations (<strong>Cut / Copy / Paste</strong>), and has a mechanism of undo / redo changes for objects (<strong>Undo / Redo</strong>). The state of the scene with objects and all their parameters (including images of objects "Image") can be saved to a file. Scene's file is a simple text file where the scene, objects and their parameters are described in the <strong>XML</strong> format.
-<img src="https://raw.githubusercontent.com/JohnMcLaren/FunShapes/master/etc/1.png" alt="arch"></p>
+<p>9.      
+Преобразование бинарных данных в<strong>Base64</strong>и
+обратно &lt;<strong>QString</strong>,<strong>QByteArray</strong>&gt;</p>
+
+<p>10.  
+Выделение нескольких объектов мышью &lt;<strong>Rubber
+Band Region</strong>&gt;</p>
+
+<p> </p>
+
+<p><strong>Редактор</strong>позволяет создавать и редактировать встроенные
+типы объектов, такие как:</p>
+
+<p>1.         
+Треугольник</p>
+
+<p>2.         
+Прямоугольник</p>
+
+<p>3.         
+Круг</p>
+
+<p>4.         
+Текст</p>
+
+<p>5.         
+Рисунок</p>
+
+<p> </p>
+
+<p>У** объектов** могут быть изменены следующие
+параметры:</p>
+
+<p>1.         
+Положение</p>
+
+<p>2.         
+Геометрия (для объектов “Рисунок”/”Текст”
+изображение/текст масштабируется под объект)</p>
+
+<p>3.         
+Ориентация (угол наклона по оси Z)</p>
+
+<p>4.         
+Цвет (кроме объекта “Рисунок”)</p>
+
+<p>5.         
+Встроенный текст объекта а также шрифт, размер и
+цвет этого текста (кроме объекта “Текст”)</p>
+
+<p> </p>
+
+<p><strong>Сцена</strong>поддерживает работу с буфером обмена (<strong>Cut/Copy/Paste</strong>)
+и обладает механизмом отмены/восстановления изменений объектов (<strong>Undo/Redo</strong>).
+Состояние сцены с объектами и все их параметры (включая изображения объектов
+“Рисунок”) могут быть сохранены в файл. Файл сцены является простым текстовым
+файлом где сцена, объекты и их параметры описываются в<strong>XML</strong>формате.</p>
       </section>
     </div>
 
