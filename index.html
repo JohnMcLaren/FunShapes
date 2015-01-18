@@ -1,84 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Funshapes by JohnMcLaren</title>
+    <meta name="description" content="Funshapes : Editor 2D graphical  objects &lt;C++/Qt5&gt;">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Funshapes</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1 class="header">Funshapes</h1>
-        <p class="header">Editor 2D graphical  objects &lt;C++/Qt5&gt;</p>
 
-        <ul>
-          <li class="download"><a class="buttons" href="https://github.com/JohnMcLaren/FunShapes/zipball/master">Download ZIP</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/JohnMcLaren/FunShapes/tarball/master">Download TAR</a></li>
-          <li><a class="buttons github" href="https://github.com/JohnMcLaren/FunShapes">View On GitHub</a></li>
-        </ul>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/JohnMcLaren/FunShapes">View on GitHub</a>
 
-        <p class="header">This project is maintained by <a class="header name" href="https://github.com/JohnMcLaren">JohnMcLaren</a></p>
+          <h1 id="project_title">Funshapes</h1>
+          <h2 id="project_tagline">Editor 2D graphical  objects &lt;C++/Qt5&gt;</h2>
 
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/JohnMcLaren/FunShapes/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/JohnMcLaren/FunShapes/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
 
-      </header>
-      <section>
-        <h3>
-<a id="1--Описание" class="anchor" href="#1--%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.  Описание</h3>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="funshapes" class="anchor" href="#funshapes" aria-hidden="true"><span class="octicon octicon-link"></span></a>FunShapes</h1>
 
-<p>Редактор написан на языке C++ с использованием кроссплатформы Qt5. Он может служить шаблоном для начинающих программистов использующих Qt для создания собственных программ использующих 2D графику. В коде программы можно найти примеры:</p>
+<p>Editor 2D graphical  objects / Редактор графических 2D объектов</p>
+
+<p><img src="https://github.com/JohnMcLaren/FunShapes/blob/master/funshapes_screenshot.png" alt="screenshot"></p>
+
+<h4>
+<a id="description" class="anchor" href="#description" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description</h4>
+
+<p>The <strong>editor</strong> is written on C ++ using cross-platform <strong>Qt5</strong>. It can serve as a template for novice programmers using Qt to create their own programs using 2D graphics. In the program code can be found examples:</p>
 
 <ol>
-<li> Класса  как коммутатора событий/сигналов возникающих в программе</li>
-<li> Запись в файл, чтение из файла </li>
-<li> Создание собственного контексного меню </li>
-<li> Реализация механизма отмены/восстановления произведённых пользователем действий (Undo/Redo). Он же может быть использован для автоматизации действий программы - запись/воспроизведение макросов, анимация.</li>
-<li> Трансформации графического вида сцены/объектов (масштаб, вращение) </li>
-<li> Работа с видом сцены  преобразование координат (mapFrom…)</li>
-<li> Рисование с использованием </li>
-<li> Переопределение метода paint() объекта для управления процессом отрисовки (использование градиентной заливки, “подсветки” , определение порядка отрисовки пересекающихся объектов, управление масштабом рисования) </li>
-<li> Преобразование бинарных данных в Base64 и обратно </li>
-<li>Выделение нескольких объектов мышью </li>
+<li> Class [<strong>QSignalMapper</strong>] as switch  events / signals arising in the program</li>
+<li> Writing to file, read from file [<strong>QFile, QFileDialog, QTextStream</strong>]</li>
+<li> Creating your own context menu [<strong>QMenu</strong>]</li>
+<li> Implementation mechanism undo / redo actions made by the user (<strong>Undo/Redo</strong>). He can also be used to automation software - as record/playback macros, animation etc.</li>
+<li> Transformation of a graphic view of the scene / objects (scale, rotation) [<strong>QTransform</strong>]</li>
+<li> Working with View of Scene [<strong>QGraphicsView</strong>] coordinate transformation (mapFrom…)</li>
+<li> Drawing with [<strong>QPainterPath</strong>]</li>
+<li> Overriding the paint () method of the object to control the process of drawing (use gradient fill, "highlighting", the definition of the order of drawing intersecting objects, control the scale drawing) [<strong>QPainter</strong>]</li>
+<li> Convert binary data to Base64 and back [<strong>QString, QByteArray</strong>]</li>
+<li>Selecting multiple objects with the mouse [<strong>Rubber Band Region</strong>]</li>
 </ol>
 
-<p>Редактор позволяет создавать и редактировать встроенные типы объектов, такие как:
-1.  Треугольник
-2.  Прямоугольник
-3.  Круг
-4.  Текст
-5.  Рисунок</p>
+<p>The <strong>editor</strong> allows you to create and edit embedded types of objects, such as:</p>
 
-<p>У объектов могут быть изменены следующие параметры:
-1.  Положение
-2.  Геометрия (для объектов “Рисунок”/”Текст” изображение/текст масштабируется под объект)
-3.  Ориентация (угол наклона по оси Z)
-4.  Цвет (кроме объекта “Рисунок”)
-5.  Встроенный текст объекта а также шрифт, размер и цвет этого текста (кроме объекта “Текст”)</p>
+<ol>
+<li> Triangle</li>
+<li> Rectangle</li>
+<li> Circle</li>
+<li> Text</li>
+<li> Image</li>
+</ol>
 
-<p>Сцена поддерживает работу с буфером обмена (Cut/Copy/Paste) и обладает механизмом отмены/восстановления изменений объектов (Undo/Redo). Состояние сцены с объектами и все их параметры (включая изображения объектов “Рисунок”) могут быть сохранены в файл. Файл сцены является простым текстовым файлом где сцена, объекты и их параметры описываются в XML формате.</p>
+<p><strong>Objects</strong> might change the following parameters:</p>
 
-<h3>
-<a id="2----Архитектура-и-классы" class="anchor" href="#2----%D0%90%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0-%D0%B8-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.    Архитектура и классы</h3>
+<ol>
+<li> Position</li>
+<li> Geometry(for objects "Image"/"Text", image/text scaled for object area)</li>
+<li> Orientation (angle on the Z axis)</li>
+<li> Color (except object "Image")</li>
+<li> Embedded text of object as well as the font, size and color of this text (except "Text" object)</li>
+</ol>
 
-<p>Основные классы программы:
-1.  CScene (унаследован от QGraphicsScene)
-2.  CGraphObject (унаследован от QGraphicsObject)
-3.  CUndoRedo (унаследован от QObject)
-4.  CXMLParser (унаследован от QXmlDefaultHandler)</p>
+<p><strong>Scene</strong> supports clipboard operations (<strong>Cut / Copy / Paste</strong>), and has a mechanism of undo / redo changes for objects (<strong>Undo / Redo</strong>). The state of the scene with objects and all their parameters (including images of objects "Image") can be saved to a file. Scene's file is a simple text file where the scene, objects and their parameters are described in the <strong>XML</strong> format.
+<img src="https://github.com/JohnMcLaren/FunShapes/blob/master/etc/1.svg" alt=""></p>
       </section>
-      <footer>
-        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Funshapes maintained by <a href="https://github.com/JohnMcLaren">JohnMcLaren</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		          <script type="text/javascript">
+
+              <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -88,6 +99,7 @@
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
+
 
   </body>
 </html>
