@@ -1,7 +1,7 @@
 FunShapes
 =========
 Editor 2D graphical  objects / Редактор графических 2D объектов
-(For more information "how this made" visit http://johnmclaren.github.io/FunShapes/)
+*(For more information "how this made" visit http://johnmclaren.github.io/FunShapes/)
 ![screenshot](https://github.com/JohnMcLaren/FunShapes/blob/master/funshapes_screenshot.png)
 
 ####Description
