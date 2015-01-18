@@ -1,56 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Funshapes : Editor 2D graphical  objects &lt;C++/Qt5&gt;">
+    <title>Funshapes by JohnMcLaren</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Funshapes</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-
   <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Funshapes</h1>
+        <p class="header">Editor 2D graphical  objects &lt;C++/Qt5&gt;</p>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/JohnMcLaren/FunShapes">View on GitHub</a>
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/JohnMcLaren/FunShapes/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/JohnMcLaren/FunShapes/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/JohnMcLaren/FunShapes">View On GitHub</a></li>
+        </ul>
 
-          <h1 id="project_title">Funshapes</h1>
-          <h2 id="project_tagline">Editor 2D graphical  objects &lt;C++/Qt5&gt;</h2>
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/JohnMcLaren">JohnMcLaren</a></p>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/JohnMcLaren/FunShapes/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/JohnMcLaren/FunShapes/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <ol>
-<li> Описание</li>
-</ol>
+      </header>
+      <section>
+        <h2>
+<a id="1---Описание" class="anchor" href="#1---%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.   Описание</h2>
 
-<p>Редактор написан на языке C++ с использованием кроссплатформы Qt5. Он может служить шаблоном для начинающих программистов использующих Qt для создания собственных программ использующих 2D графику. В коде программы можно найти примеры:</p>
+<p><strong>Редактор</strong> написан на языке C++ с использованием кроссплатформы Qt5. Он может служить шаблоном для начинающих программистов использующих Qt для создания собственных программ использующих 2D графику. В коде программы можно найти примеры:</p>
 
 <ol>
-<li> Класса  как коммутатора событий/сигналов возникающих в программе</li>
-<li> Запись в файл, чтение из файла </li>
-<li> Создание собственного контексного меню </li>
-<li> Реализация механизма отмены/восстановления произведённых пользователем действий (Undo/Redo). Он же может быть использован для автоматизации действий программы - запись/воспроизведение макросов, анимация.</li>
-<li> Трансформации графического вида сцены/объектов (масштаб, вращение) </li>
-<li> Работа с видом сцены  преобразование координат (mapFrom…)</li>
-<li> Рисование с использованием </li>
-<li> Переопределение метода paint() объекта для управления процессом отрисовки (использование градиентной заливки, “подсветки” , определение порядка отрисовки пересекающихся объектов, управление масштабом рисования) </li>
-<li> Преобразование бинарных данных в Base64 и обратно </li>
-<li>Выделение нескольких объектов мышью </li>
+<li> Класса &lt;<strong>QSignalMapper</strong>&gt; как коммутатора событий/сигналов возникающих в программе</li>
+<li> Запись в файл, чтение из файла &lt;<strong>QFile</strong>, <strong>QFileDialog</strong>, <strong>QTextStream</strong>&gt;</li>
+<li> Создание собственного контексного меню &lt;<strong>QMenu</strong>&gt;</li>
+<li> Реализация механизма отмены/восстановления произведённых пользователем действий (<strong>Undo/Redo</strong>). Он же может быть использован для автоматизации действий программы - запись/воспроизведение макросов, анимация.</li>
+<li> Трансформации графического вида сцены/объектов (масштаб, вращение) &lt;<strong>QTransform</strong>&gt;</li>
+<li> Работа с видом сцены &lt;<strong>QGraphicsView</strong>&gt; преобразование координат (<strong>mapFrom…</strong>)</li>
+<li> Рисование с использованием &lt;<strong>QPainterPath</strong>&gt;</li>
+<li> Переопределение метода <strong><em>paint()</em></strong> объекта для управления процессом отрисовки (использование градиентной заливки, “подсветки” , определение порядка отрисовки пересекающихся объектов, управление масштабом рисования) &lt;<strong>QPainter</strong>&gt;</li>
+<li> Преобразование бинарных данных в <strong>Base64</strong> и обратно &lt;<strong>QString</strong>, <strong>QByteArray</strong>&gt;</li>
+<li>Выделение нескольких объектов мышью &lt;<strong>Rubber Band Region</strong>&gt;</li>
 </ol>
 
-<p>Редактор позволяет создавать и редактировать встроенные типы объектов, такие как:</p>
+<p><strong>Редактор</strong> позволяет создавать и редактировать встроенные типы объектов, такие как:</p>
 
 <ol>
 <li> Треугольник</li>
@@ -60,7 +58,7 @@
 <li> Рисунок</li>
 </ol>
 
-<p>У объектов могут быть изменены следующие параметры:</p>
+<p>У <strong>объектов</strong> могут быть изменены следующие параметры:</p>
 
 <ol>
 <li> Положение</li>
@@ -70,39 +68,41 @@
 <li> Встроенный текст объекта а также шрифт, размер и цвет этого текста (кроме объекта “Текст”)</li>
 </ol>
 
-<p>Сцена поддерживает работу с буфером обмена (Cut/Copy/Paste) и обладает механизмом отмены/восстановления изменений объектов (Undo/Redo). Состояние сцены с объектами и все их параметры (включая изображения объектов “Рисунок”) могут быть сохранены в файл. Файл сцены является простым текстовым файлом где сцена, объекты и их параметры описываются в XML формате.</p>
+<p><strong>Сцена</strong> поддерживает работу с буфером обмена (<strong>Cut/Copy/Paste</strong>) и обладает механизмом отмены/восстановления изменений объектов (<strong>Undo/Redo</strong>). Состояние сцены с объектами и все их параметры (включая изображения объектов “Рисунок”) могут быть сохранены в файл. Файл сцены является простым текстовым файлом где сцена, объекты и их параметры описываются в <strong>XML</strong> формате.</p>
 
-<ol>
-<li>   Архитектура и классы</li>
-</ol>
+<h2>
+<a id="2----Архитектура-и-классы" class="anchor" href="#2----%D0%90%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0-%D0%B8-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.    Архитектура и классы</h2>
 
 <p>Основные классы программы:</p>
 
 <ol>
-<li> CScene (унаследован от QGraphicsScene)</li>
-<li> CGraphObject (унаследован от QGraphicsObject)</li>
-<li> CUndoRedo (унаследован от QObject)</li>
-<li> CXMLParser (унаследован от QXmlDefaultHandler)</li>
+<li> <strong>CScene</strong> (унаследован от <strong>QGraphicsScene</strong>)</li>
+<li> <strong>CGraphObject</strong> (унаследован от <strong>QGraphicsObject</strong>)</li>
+<li> <strong>CUndoRedo</strong> (унаследован от <strong>QObject</strong>)</li>
+<li> <strong>CXMLParser</strong> (унаследован от <strong>QXmlDefaultHandler</strong>)</li>
 </ol>
 
 <p><img src="https://raw.githubusercontent.com/JohnMcLaren/FunShapes/master/etc/1.png" alt=""></p>
 
-<p>CScene </p>
+<h3>
+<a id="cscene" class="anchor" href="#cscene" aria-hidden="true"><span class="octicon octicon-link"></span></a>CScene</h3>
 
-<p>Класс сцены ‘CScene’ унаследован от ‘QGraphicsScene’ и как графический объект представляет из себя бесконечное математическое поле с центром в точке . ‘QGraphicsScene’ не имеет своего средства отображения. Поэтому, для отображения содержимого сцены создаётся дополнительный класс ‘ViewScene’ который является наследником ‘QGraphicsView’ и выполняет функцию “окна просмотра” сцены. Все действия по перемещению по сцене и её масштабирование выполняются именно посредством ‘ViewScene’.
-В логике программы сцена занимает центральное место и является контейнером для находящихся на ней объектов ‘CGraphObject’. Именно сцена первой принимает команды пользователя от главного окна и после обработки запроса вызывает соответствующий метод объекта. Она же ведёт историю изменений параметров объектов используя класс ‘CUndoRedo’ как стек хранения записей производимых с объектом действий и вызывает по команде пользователя методы этого класса для отмены/восстановления изменённых параметров объекта/объектов. 
-Создание объекта на сцене сводится к передаче текстовой строки описывающей объект в xml-формате методу createObject() сцены где она разбирается и определённые параметры передаются в конструктор объекта ‘CGraphObject’. Для разбора этой строки в параметры соответствующих типов сцена использует класс ‘CXMLParser’.</p>
+<p>Класс сцены ‘<strong>CScene</strong>’ унаследован от ‘QGraphicsScene’ и как графический объект представляет из себя бесконечное математическое поле с центром в точке . ‘QGraphicsScene’ не имеет своего средства отображения. Поэтому, для отображения содержимого сцены создаётся дополнительный класс ‘ViewScene’ который является наследником ‘QGraphicsView’ и выполняет функцию “окна просмотра” сцены. Все действия по перемещению по сцене и её масштабирование выполняются именно посредством ‘ViewScene’.
+В логике программы сцена занимает центральное место и является контейнером для находящихся на ней объектов ‘<strong>CGraphObject</strong>’. Именно сцена первой принимает команды пользователя от главного окна и после обработки запроса вызывает соответствующий метод объекта. Она же ведёт историю изменений параметров объектов используя класс ‘<strong>CUndoRedo</strong>’ как стек хранения записей производимых с объектом действий и вызывает по команде пользователя методы этого класса для отмены/восстановления изменённых параметров объекта/объектов. 
+Создание объекта на сцене сводится к передаче текстовой строки описывающей объект в xml-формате методу createObject() сцены где она разбирается и определённые параметры передаются в конструктор объекта ‘<strong>CGraphObject</strong>’. Для разбора этой строки в параметры соответствующих типов сцена использует класс ‘<strong>CXMLParser</strong>’.</p>
 
 <p>Графическая модель сцены</p>
 
 <p><img src="https://raw.githubusercontent.com/JohnMcLaren/FunShapes/master/etc/2.png" alt=""></p>
 
-<p>CGraphObject</p>
+<h3>
+<a id="cgraphobject" class="anchor" href="#cgraphobject" aria-hidden="true"><span class="octicon octicon-link"></span></a>CGraphObject</h3>
 
-<p>Класс CGraphObject унаследован от  и поэтому уже имеет встроенные методы взаимодействия с пользователем (реакция на мышь и кнопки) и другими объектами на сцене (слои отображения, вычисление пересечений), а также свой метод отрисовки себя на сцене - paint().
-Создание объекта начинается с подбора контура от запрошенного (аргумент type конструктора) из имеющихся(группа функций вида get...Path()). Если метод отрисовки запрошенной фигуры имеется, далее к создаваемому объекту применяются остальные переданные в конструктор параметры.
+<p>Класс <strong>CGraphObject</strong> унаследован от &lt;<strong>QGraphicsObject</strong>&gt; и поэтому уже имеет встроенные методы взаимодействия с пользователем (реакция на мышь и кнопки) и другими объектами на сцене (слои отображения, вычисление пересечений), а также свой метод отрисовки себя на сцене - <em><strong>paint()</strong></em>.
+Создание объекта начинается с подбора контура от запрошенного (аргумент <strong>type</strong> конструктора) из имеющихся(группа функций вида <strong>get...Path()</strong>). Если метод отрисовки запрошенной фигуры имеется, далее к создаваемому объекту применяются остальные переданные в конструктор параметры.
 CGraphObject
-(const QString type,    // один из допустимых типов объекта
+(
+const QString type,    // один из допустимых типов объекта
 const QString name,    // уникальное имя объекта на сцене
 const qreal x,        // координата X
 const qreal y,        // координата Y
@@ -121,7 +121,8 @@ DWORD *scenemode)    // указатель на переменную сцены 
 <p><img src="https://raw.githubusercontent.com/JohnMcLaren/FunShapes/master/etc/3.png" alt="">
 <img src="https://raw.githubusercontent.com/JohnMcLaren/FunShapes/master/etc/4.png" alt=""></p>
 
-<p>CUndoRedo</p>
+<h3>
+<a id="cundoredo" class="anchor" href="#cundoredo" aria-hidden="true"><span class="octicon octicon-link"></span></a>CUndoRedo</h3>
 
 <p>В основе класса лежит самоуправляемый массив (стек) текстовых строк описывающих изменения произошедшие на сцене. Доступ к стеку извне разрешён только посредством методов класса CUndoRedo. Класс сам переопределяет размер стека под новые записи при добавлении их методом push и управляет индексом текущей записи при извлечении записей методами popUndo/popRedo.
 Графически работу стека можно предоставить так</p>
@@ -135,7 +136,8 @@ DWORD *scenemode)    // указатель на переменную сцены 
 Единичная запись об одном изменении одного объекта заканчивается символом &lt;;&gt; (точка с запятой) затем может следовать следующая запись возможно об изменении другого объекта. Таким образом, в одну стековую макро-запись/строку можно вложить информацию о множественных изменениях за одно действие пользователя, скажем групповое перемещение, изменение цвета и т.д.. 
 Порядок обработки макро-записи (определен в ловушках Undo/Redo команд) - при Undo от последней к первой (обратный), при Redo от первой к последней (прямой).</p>
 
-<p>CXMLParser </p>
+<h3>
+<a id="cxmlparser" class="anchor" href="#cxmlparser" aria-hidden="true"><span class="octicon octicon-link"></span></a>CXMLParser</h3>
 
 <p>Единственное назначение класса, разбор текстовой строки в xml-формате с заполнением соответствующих полей структуры стандартных атрибутов объекта STD_ATTR.</p>
 
@@ -163,17 +165,12 @@ DWORD *scenemode)    // указатель на переменную сцены 
     bool        clipboard;
 }STD_ATTR;</p>
       </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Funshapes maintained by <a href="https://github.com/JohnMcLaren">JohnMcLaren</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
       </footer>
     </div>
-
-              <script type="text/javascript">
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		          <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -183,7 +180,6 @@ DWORD *scenemode)    // указатель на переменную сцены 
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
-
 
   </body>
 </html>
