@@ -6,7 +6,7 @@
     <title>FunShapes by JohnMcLaren</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
     <script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
@@ -101,23 +101,22 @@
 <p>Класс <strong>CGraphObject</strong> унаследован от &lt;<strong>QGraphicsObject</strong>&gt; и поэтому уже имеет встроенные методы взаимодействия с пользователем (реакция на мышь и кнопки) и другими объектами на сцене (слои отображения, вычисление пересечений), а также свой метод отрисовки себя на сцене - <em><strong>paint()</strong></em>.
 Создание объекта начинается с подбора контура от запрошенного (аргумент <strong>type</strong> конструктора) из имеющихся(группа функций вида <strong>get...Path()</strong>). Если метод отрисовки запрошенной фигуры имеется, далее к создаваемому объекту применяются остальные переданные в конструктор параметры.</p>
 
-<pre><code>**CGraphObject**
-(const QString type,    // один из допустимых типов объекта
-const QString name,    // уникальное имя объекта на сцене
-const qreal x,        // координата X
-const qreal y,        // координата Y
-const qreal z,        // координата Z (слой объекта)
-const qreal width,    // ширина
-const qreal height,    // высота
-const qreal angle,    // угол наклона объекта
-const DWORD color,    // цвет заливки объекта
-const QString text,    // встроенный текст объекта
-QString textfont,        // далее параметры этого текста
+<div class="highlight highlight-c++"><pre>**CGraphObject**
+(<span class="pl-k">const</span> QString type,    <span class="pl-c">// один из допустимых типов объекта</span>
+<span class="pl-k">const</span> QString name,    <span class="pl-c">// уникальное имя объекта на сцене</span>
+<span class="pl-k">const</span> qreal x,        <span class="pl-c">// координата X</span>
+<span class="pl-k">const</span> qreal y,        <span class="pl-c">// координата Y</span>
+<span class="pl-k">const</span> qreal z,        <span class="pl-c">// координата Z (слой объекта)</span>
+<span class="pl-k">const</span> qreal width,    <span class="pl-c">// ширина</span>
+<span class="pl-k">const</span> qreal height,    <span class="pl-c">// высота</span>
+<span class="pl-k">const</span> qreal angle,    <span class="pl-c">// угол наклона объекта</span>
+<span class="pl-k">const</span> DWORD color,    <span class="pl-c">// цвет заливки объекта</span>
+<span class="pl-k">const</span> QString text,    <span class="pl-c">// встроенный текст объекта</span>
+QString textfont,        <span class="pl-c">// далее параметры этого текста</span>
 DWORD textsize,
-const DWORD textcolor,
-const QString image,    // картинка под объект “Рисунок” в формате Base64
-DWORD *scenemode)    // указатель на переменную сцены (текущий режим редактирования объектов Геометрия/Вращение)
-</code></pre>
+<span class="pl-k">const</span> DWORD textcolor,
+<span class="pl-k">const</span> QString image,    <span class="pl-c">// картинка под объект “Рисунок” в формате Base64</span>
+DWORD *scenemode)    <span class="pl-c">// указатель на переменную сцены (текущий режим редактирования объектов Геометрия/Вращение)</span></pre></div>
 
 <p><img src="https://raw.githubusercontent.com/JohnMcLaren/FunShapes/master/etc/3.png" alt="">
 <img src="https://raw.githubusercontent.com/JohnMcLaren/FunShapes/master/etc/4.png" alt=""></p>
@@ -146,9 +145,9 @@ DWORD *scenemode)    // указатель на переменную сцены 
 
 <p>Единственное назначение класса, разбор текстовой строки в xml-формате с заполнением соответствующих полей структуры стандартных атрибутов объекта <strong>STD_ATTR</strong>.</p>
 
-<pre><code>typedef struct **_STD_ATTR_**
+<div class="highlight highlight-c++"><pre><span class="pl-k">typedef</span> <span class="pl-k">struct</span> **_STD_ATTR_**
 {
-    int        id;
+    <span class="pl-k">int</span>        id;
     QString        tag;
     QString        name;
     QString        type;
@@ -167,12 +166,11 @@ DWORD *scenemode)    // указатель на переменную сцены 
     DWORD    textcolor;
     QString        image;
     qreal        value;
-    bool        clipboard;
-}**STD_ATTR**;
-</code></pre>
+    <span class="pl-k">bool</span>        clipboard;
+}**STD_ATTR**;</pre></div>
       </section>
       <footer>
-        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
